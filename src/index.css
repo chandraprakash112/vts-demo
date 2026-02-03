@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+body::-webkit-scrollbar {
+    width: 0px; 
+    height: 0px; 
+}
+
+.scrollbar-none {
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.scrollbar {
+     /* scrollbar-width: thin;
+     scrollbar-color: #dee2e6 #f8f9fa; */
+    /* will-change: transform; */
+
+    /* For Chrome/Safari/Edge */
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    /* &::-webkit-scrollbar-track {
+    //     background: #f8f9fa;
+    // } */
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #DCDEE8;
+        border-radius: 3px;
+    }
+}
+
+input, textarea, select {
+    outline: none;
+}

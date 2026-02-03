@@ -1,0 +1,234 @@
+.bacgroundUrl {
+    background-image: url('/src/assets/images/login_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+}
+
+.logincard {
+    border-image: conic-gradient(
+    from 102.75deg at 50% 52.91%,
+    rgba(249, 249, 249, 0.5) -32.95deg,
+    rgba(156, 156, 156, 0.5) 10.52deg,
+    rgba(156, 156, 156, 0.35) 32.12deg,
+    rgba(255, 255, 255, 0.5) 60.28deg,
+    rgba(255, 255, 255, 0.5) 107.79deg,
+    rgba(156, 156, 156, 0.35) 187.59deg,
+    #F9F9F9 207.58deg,
+    rgba(255, 255, 255, 0.5) 287.31deg,
+    rgba(249, 249, 249, 0.5) 327.05deg,
+    rgba(156, 156, 156, 0.5) 370.52deg
+  ) 1;
+
+}
+
+.d_f-a_c{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.bacgroundUrl {
+    background-image: url('/src/assets/images/login_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+}
+ 
+.logincard {
+    border-image: conic-gradient(
+    from 102.75deg at 50% 52.91%,
+    rgba(249, 249, 249, 0.5) -32.95deg,
+    rgba(156, 156, 156, 0.5) 10.52deg,
+    rgba(156, 156, 156, 0.35) 32.12deg,
+    rgba(255, 255, 255, 0.5) 60.28deg,
+    rgba(255, 255, 255, 0.5) 107.79deg,
+    rgba(156, 156, 156, 0.35) 187.59deg,
+    #F9F9F9 207.58deg,
+    rgba(255, 255, 255, 0.5) 287.31deg,
+    rgba(249, 249, 249, 0.5) 327.05deg,
+    rgba(156, 156, 156, 0.5) 370.52deg
+  ) 1;
+ 
+}
+ 
+.d_f-a_c{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+ 
+.sideNav{
+    background-color: #F5F6FD;
+}
+.subHeaders{
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+ 
+.subHeaders-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1A387D;
+    margin-bottom: 0.5rem;
+}
+ 
+.subHeaders-sub-title {
+    font-size: 14px;
+    font-weight: 400;
+    color: #4A5A55;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+ 
+.aiHeaders {
+    width: 931px;
+    height: 68px;
+    justify-content: space-between;
+    opacity: 1;
+    border-radius: 24px;
+    border-width: 1px;
+    padding-top: 16px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    border: 1px solid #FFFFFF;
+    background: #FFFFFF40;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    box-shadow: 0px 4.36px 50px 0px #0064E11A;
+    box-shadow: 0px 4px 50px 0px #D9231D0D;
+    backdrop-filter: blur(25px)
+}
+.aiHeaders-right{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.ai-header-title {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0%;
+    color: #9BA7A3;
+}
+ 
+ 
+.userMessages {
+    width: 70%;
+    min-height: 96px;
+    opacity: 1;
+    left: 336px;
+    gap: 12px;
+    border-radius: 18px;
+    padding-top: 24px;
+    padding-right: 16px;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    background: #D9231D;
+    color: #ffff;
+    float: right;
+    margin-bottom: 1rem;
+}
+.botMessages {
+    width: 70%;
+    min-height: 96px;
+    opacity: 1;
+    left: 336px;
+    gap: 12px;
+    border-radius: 18px;
+    padding-top: 24px;
+    padding-right: 16px;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    background: #E0E0E0;
+    border-left: 1px solid #EBEBEB;
+    color: #000000;
+    float: left;
+    margin-bottom: 1rem;
+}
+ 
+.newChat {
+    width: 100%;
+    height: 36;
+    opacity: 1;
+    border-radius: 8px;
+    padding: 8px 12px;
+    box-shadow: 1px 3px 11px 0px #0000001A;
+    background-color: #FFFFFF;
+    color: #031B15;
+    font-size: 14px;
+    font-weight: 500;
+}
+ 
+ 
+.ai-sideNav {
+   padding-left: 0.5rem;
+ 
+}
+.ai-sideNav li {
+    color: #160211;
+    background: #F1F1F1;
+    height: 36;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+ 
+}
+ 
+.sideNav li {
+    color: #160211;
+    height: 36;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+ 
+}
+ 
+.nonActiveTabs {
+    width: 100%;
+    height: 36;
+    opacity: 1;
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #031B15;
+    font-size: 14px;
+    font-weight: 500;
+}
+ 
+.activeTabs {
+    background-color: #D9231D;
+    color: #ffff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.nonActiveTabs {
+  width: 100%;
+    height: 36;
+    opacity: 1;
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #031B15;
+    font-size: 14px;
+    font-weight: 500;
+}
+ 
+

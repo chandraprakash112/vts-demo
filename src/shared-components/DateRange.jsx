@@ -23,7 +23,7 @@ export default function DateRange() {
       <div className="relative inline-block" ref={dropdownRef}>
         <button
           onClick={() => setOpen(!open)}
-          className="flex items-center gap-2 border border-gray-300 px-4 py-2 rounded-lg bg-white text-gray-700 text-sm hover:bg-gray-50 cursor-pointer font-semibold"
+          className="flex items-center gap-2 border border-gray-300 px-4 py-2 rounded-lg bg-white text-gray-700 text-sm hover:bg-gray-50 pointer font-semibold"
         >
           <Calendar size={18} className="text-gray-500" />
           <span>Date Range</span>
@@ -39,7 +39,7 @@ export default function DateRange() {
               type="date"
               value={start}
               onChange={(e) => setStart(e.target.value)}
-              className="border border-gray-300 rounded-md px-3 py-2 text-sm cursor-pointer"
+              className="border border-gray-300 rounded-md px-3 py-2 text-sm pointer"
             />
 
             <span className="text-gray-600">to</span>
@@ -48,7 +48,7 @@ export default function DateRange() {
               type="date"
               value={end}
               onChange={(e) => setEnd(e.target.value)}
-              className="border border-gray-300 rounded-md px-3 py-2 text-sm cursor-pointer"
+              className="border border-gray-300 rounded-md px-3 py-2 text-sm pointer"
             />
           </div>
         </div>

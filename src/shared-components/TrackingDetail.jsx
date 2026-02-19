@@ -11,7 +11,7 @@ export default function TrackingDetail() {
       <div className="flex items-center justify-between w-full">
         <div>
           <div className="flex items-center gap-2 text-blue-900">
-            <button type="button" className="text-xl cursor-pointer" onClick={() => navigate(-1)}>
+            <button type="button" className="text-xl pointer" onClick={() => navigate(-1)}>
               <ArrowLeft />
             </button>
             <h1 className="text-2xl font-bold">{'Vehicle Status'}</h1>
@@ -97,7 +97,7 @@ export default function TrackingDetail() {
 
               {/* Step 2 */}
               <div className="flex flex-col items-center text-center w-full h-full z-10 justify-between">
-                <div className="bg-blue-600 text-white p-4 rounded-full">
+                <div className="bg-primary p-4 rounded-full">
                   <TruckElectric size={40} />
                 </div>
 

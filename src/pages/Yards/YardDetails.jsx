@@ -34,7 +34,7 @@ export default function YardDetails() {
       pipe: (key, data) => {
         return (
           <button
-            className="flex items-center gap-1 bg-red-600 text-white px-4 py-1.5 rounded-md text-sm cursor-pointer"
+            className="flex items-center gap-1 bg-red-600 text-white px-4 py-1.5 rounded-md text-sm pointer"
             onClick={() => navigate('/vehicle-status/' + data?.id)}
           >
             <MapPinIcon className="w-3 h-3 text-white" />
@@ -173,7 +173,7 @@ export default function YardDetails() {
       <div className="flex items-center justify-between w-full">
         <div>
           <div className="flex items-center gap-2 text-blue-900">
-            <button type="button" className="text-xl cursor-pointer" onClick={() => navigate(-1)}>
+            <button type="button" className="text-xl pointer" onClick={() => navigate(-1)}>
               <ArrowLeft />
             </button>
             <h1 className="text-2xl font-bold">{'FG4 Yard'}</h1>

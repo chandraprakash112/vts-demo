@@ -1,6 +1,3 @@
-import { useState } from 'react';
-import Search from '../../shared-components/Search';
-import YardDetails from './YardDetails';
 import { ArrowLeft, MapPin, Package, Truck, BarChart2, DollarSign } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -101,9 +98,8 @@ function YardDashboard() {
           {plants.map((p, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer"
+              className="bg-white rounded-xl shadow-lg overflow-hidden pointer"
               onClick={() => {
-                // setPlantDetails(p);
                 navigate(`/yard/${p.id}`);
               }}
             >

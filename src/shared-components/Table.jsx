@@ -210,7 +210,7 @@ export default function Table({
         </table>
       </div>
       {/* PAGINATION */}
-      <div className="flex justify-center md:justify-end mt-4 gap-2 items-center p-3">
+      <div className="flex justify-center md:justify-end gap-2 items-center p-3">
         <div className="inline-flex items-center border rounded-md overflow-hidden text-sm">
           {/* Previous */}
           <button

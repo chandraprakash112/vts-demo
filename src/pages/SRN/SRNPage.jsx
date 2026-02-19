@@ -76,6 +76,43 @@ export default function SRNPage() {
         </div>
       ),
     },
+    {
+      key: '',
+      value: 'View On Map',
+      pipe: (key, el) => (
+        <div className="flex items-center gap-3">
+          <button
+            type="button"
+            onClick={() => {}}
+            className={`flex items-center justify-center gap-1 w-auto
+          px-4 py-1 rounded-md text-md transition
+          bg-red-600 hover:bg-red-700 text-white
+          pointer capitalize
+          disabled:opacity-40
+          disabled:cursor-not-allowed
+          `}
+          >
+            <MapPin size={14} />
+            {'View'}
+          </button>
+
+          <button
+            type="button"
+            className="flex items-center justify-center
+            w-8 h-8
+            rounded-full
+            bg-black text-white
+            hover:bg-white hover:text-black
+            outline outline-2 outline-black
+            transition pointer
+            disabled:opacity-40 disabled:cursor-not-allowed
+          "
+          >
+            <i className="text-2xl font-bold leading-none">i</i>
+          </button>
+        </div>
+      ),
+    },
   ];
   const rows = [
     {

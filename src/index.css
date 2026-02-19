@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 body::-webkit-scrollbar {
-    width: 0px; 
-    height: 0px; 
+    width: 0px;
+    height: 0px;
 }
 
 .scrollbar-none {
@@ -11,7 +11,7 @@ body::-webkit-scrollbar {
 }
 
 .scrollbar {
-     /* scrollbar-width: thin;
+    /* scrollbar-width: thin;
      scrollbar-color: #dee2e6 #f8f9fa; */
     /* will-change: transform; */
 
@@ -31,6 +31,216 @@ body::-webkit-scrollbar {
     }
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
     outline: none;
 }
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+    box-shadow: none !important;
+}
+
+
+/* =================================== Neumorphism Tokens ============================= */
+:root {
+    --surface: #ffffff;
+    --shadow-light: #ffffff;
+    --shadow-dark: #c9d3e6;
+    --accent: #e6f0ff;
+}
+
+.neo {
+    background: var(--surface);
+    padding: 10px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.neo-s {
+    transition: 0.3s ease;
+    box-shadow: 8px 8px 18px var(--shadow-dark),
+        -8px -8px 18px var(--shadow-light);
+}
+
+.neo-s-h:hover {
+    transform: translateY(-6px);
+    box-shadow: 12px 12px 24px var(--shadow-dark),
+        -12px -12px 24px var(--shadow-light);
+}
+
+.neo-pressed {
+    background: var(--surface);
+    border-radius: 16px;
+    box-shadow: inset 6px 6px 12px var(--shadow-dark),
+        inset -6px -6px 12px var(--shadow-light);
+    transition: 0.3s ease;
+}
+
+.neo-pressed:hover {
+    transform: translateY(-2px);
+    box-shadow: 8px 8px 18px var(--shadow-dark),
+        -8px -8px 18px var(--shadow-light);
+}
+
+/* hover effect rotate-6 */
+
+.group .zoom-effect {
+    transition: transform 0.2s ease-in-out;
+}
+
+.group:hover .zoom-effect {
+    /* transform: rotate(6deg); */
+    transform: scale(1.1);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.pointer-none {
+    cursor: none;
+}
+
+
+/* ================================ css for responsive ============================== */
+
+:root {
+    --sm: 8px;
+    --md: .8rem;
+    --lg: 1.25rem;
+    --xl: 2rem;
+    --xxl: 3rem;
+}
+
+@media screen and (max-width: 1138px) {
+    :root {
+        --md: .9rem;
+        --lg: 1.1rem;
+        --xl: 1.5rem;
+        --xxl: 2rem;
+    }
+}
+
+/* @media (min-width: 768px) {} */
+@media screen and (max-width: 640px) {
+    :root {
+        --md: 0.9rem;
+        --lg: 1rem;
+        --xl: 1.25rem;
+        --xxl: 1.25rem;
+    }
+}
+
+.m-sm, .p-sm, .r-sm { --v: var(--sm); }
+.m-md, .p-md, .r-md { --v: var(--md); }
+.m-lg, .p-lg, .r-lg { --v: var(--lg); }
+.m-xl, .p-xl, .r-xl { --v: var(--xl); }
+.m-xxl, .p-xxl, .r-xxl { --v: var(--xxl); }
+/* .r-xxl { border-radius: var(--xxl); } */
+
+.m-sm, .m-md, .m-lg, .m-xl, .m-xxl { margin: var(--v); }
+.p-sm, .p-md, .p-lg, .p-xl, .p-xxl { padding: var(--v); }
+.r-sm, .r-md, .r-lg, .r-xl, .r-xxl { border-radius: var(--v); }
+
+.r-circle {
+  border-radius: 50%;
+}
+
+
+/* ================================ 🎨 Theme ============================== */
+:root {
+    --white: #fff;
+    --black: #000;
+    --bs-border: #dedede;
+    --glass: rgba(255, 255, 255, 0.2);
+    --bg: oklch(98.5% 0.002 247.839);
+    --bg-gradient: linear-gradient(135deg, #319795, #38b2ac);
+    --text: var(--black);
+    --primary: #004eae;
+    --secondary: oklch(97% 0.014 254.604);
+}
+
+
+
+.btn-text {
+    color: var(--primary);
+    background-color: var(--surface);
+}
+
+.btn-bg {
+    color: var(--surface);
+    background-color: var(--primary);
+}
+
+.hover-h:hover {
+  background-color: color-mix(in srgb, var(--primary) 3%, white);
+}
+
+.custom-b {
+    border-color: var(--primary);
+}
+
+
+/* 🌙 Dark Theme */
+.dark-theme {
+    --bg: var(--black);
+    --text: var(--white);
+    /* --primary: var(--secondary); */
+
+    --primary: color-mix(in srgb, var(--bg), var(--white) 20%);
+    --bg-gradient: linear-gradient(135deg, #319795, #38b2ac);
+    --glass: rgb(0 0 0 / 38%);
+}
+
+.teal-theme {
+    /* --bg:oklch(0.87 0.02 156.87); */
+    /* --bg: oklch(0.9 0.03 156.76); */
+    /* --bg: #81d4fa; */
+    /* --bg:#01579b; */
+    /* --bg: #ffb74dab; */
+    /* --bg: #319795; */
+    /* --bg: oklch(92.5% 0.084 155.995); */
+
+    --bg: oklch(78.9% 0.154 211.53);
+    --text: var(--white);
+    /* --primary: #004eae; */
+    --primary: color-mix(in srgb, var(--bg), var(--black) 70%);
+
+}
+
+.bg-current {
+    background-color: inherit;
+}
+
+.bg-theme {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.bg-primary {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.bg-secondary,
+.bg-secondary-h:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.bg-gradient {
+    background-color: var(--bg-gradient);
+    color: var(--text);
+}
+/* body {
+    background-color: color-mix(in srgb, var(--bg), var(--bg2) 70%);
+    color: color-mix(in srgb, var(--text), var(--text2) 30%);
+} */

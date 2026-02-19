@@ -21,10 +21,10 @@ export default function Modal({ show, onClose, modalData }) {
   return (
     <div style={overlayStyle}>
       <div style={{ position: 'relative' }}>
-        <div className="w-full max-w-xl mx-auto bg-white rounded-xl shadow">
+        <div className="w-full max-w-xl mx-auto bg-white rounded-xl shadow p-2">
           <button
             type="button"
-            className="absolute top-4 right-4 text-gray-300 hover:text-black cursor-pointer z-10"
+            className="absolute top-4 right-4 text-gray-500 hover:text-black pointer z-10"
             onClick={onClose}
           >
             ✕

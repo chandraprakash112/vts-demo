@@ -1,3 +1,4 @@
+import NameIcon from '../../shared-components/NameIcon';
 import {
   Dashbord,
   Menu,
@@ -8,304 +9,299 @@ import {
   MDITruck,
   Inspection,
 } from '../../styles/icons';
-import { Home, Info, Search, Settings, LogOut, ChevronRight, LineChart, User, Lock, CircleQuestionMark, Clock } from 'lucide-react';
+import {
+  Home,
+  Info,
+  Search,
+  Settings,
+  LogOut,
+  ChevronRight,
+  Move3DIcon,
+  LayoutDashboard,
+  User,
+  MessageSquare,
+  HelpCircle,
+  Lock,
+  Activity,
+  FileBarChart,
+  BarChart,
+  Key,
+  Shield,
+  Users,
+  FileText,
+  Layers,
+  Tag,
+  ScrollText,
+  ToggleLeft,
+  Radio,
+  Mic2,
+  Library,
+  Music4,
+  Flame,
+} from 'lucide-react';
 
 const MenuItems = () => [
   {
-    lablel: 'Home',
+    label: 'Home',
     nav: [
       {
-        title: 'Dashboard',
-        path: '/dashboard',
-        icon: <Dashbord className="size-5" />,
+        title: 'DashCore',
+        path: '/',
+        icon: <LayoutDashboard className="w-full h-full" />,
       },
     ],
   },
   {
-    lablel: 'Plant Operations',
+    label: 'Content',
     nav: [
       {
-        title: 'Dashboard - Plants',
-        path: '/plants',
-        icon: <MDITruck className="size-5" />,
+        title: 'Hub Dashboard',
+        path: '/hub',
+        icon: <Dashbord className="w-full h-full" />,
       },
       {
-        title: 'Plant Management',
-        path: '/plant-management',
-        icon: <MDITruck className="size-5" />,
+        title: 'Posts',
+        path: '/posts',
+        icon: <FileText className="w-full h-full" />,
       },
     ],
   },
   {
-    lablel: 'Yard Operations',
+    label: 'Docs',
+    nav: [
+      {
+        title: 'React',
+        icon: <NameIcon name={'React'} />,
+        nav: [
+          {
+            title: 'ReactCore',
+            path: '/react',
+            icon: <NameIcon name={'React Core'} />,
+          },
+          {
+            title: 'React Sniped',
+            path: '/react-sniped',
+            icon: <NameIcon name={'React Sniped'} />,
+          },
+          {
+            title: 'React Comonents',
+            path: '/react-components',
+            icon: <NameIcon name={'React Comonents'} />,
+          },
+        ],
+      },
+      {
+        title: 'Angular',
+        icon: <NameIcon name={'A'} />,
+        nav: [
+          {
+            title: 'AngularCore',
+            path: '/angular',
+            icon: <NameIcon name={'Angular Core'} />,
+          },
+          {
+            title: 'Angular Sniped',
+            path: '/angular-sniped',
+            icon: <NameIcon name={'Angular Sniped'} />,
+          },
+        ],
+      },
+      {
+        title: 'JavaScript',
+        icon: <NameIcon name={'J S'} />,
+        nav: [
+          {
+            title: 'Core',
+            path: '/javascript',
+            icon: <NameIcon name={'Core'} />,
+          },
+          {
+            title: 'Javascript code',
+            path: '/javascript-code',
+            icon: <NameIcon name={'J c'} />,
+          },
+        ],
+      },
+      {
+        title: 'HTML',
+        icon: <NameIcon name={'J S'} />,
+        nav: [
+          {
+            title: 'HTML Core',
+            path: '/html',
+            icon: <NameIcon name={'H'} />,
+          },
+          {
+            title: 'HTML code',
+            path: '/html-code',
+            icon: <NameIcon name={'H code'} />,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: 'Users',
+    nav: [
+      {
+        title: 'All Users',
+        // title: 'User Hub',
+        path: '/users',
+        icon: <Users className="w-full h-full" />,
+      },
+      {
+        title: 'Roles',
+        path: '/roles',
+        icon: <Shield className="w-full h-full" />,
+      },
+      {
+        title: 'Permissions',
+        path: '/permission',
+        icon: <Key className="w-full h-full" />,
+      },
+    ],
+  },
+  {
+    label: 'Media',
+    nav: [
+      {
+        title: 'Story',
+        path: '/story',
+        icon: <Flame className="w-full h-full" />,
+      },
+      {
+        title: 'Status',
+        path: '/status',
+        icon: <Flame className="w-full h-full" />,
+      },
+      {
+        title: 'Music Hub',
+        inActiveHead: true,
+        // path: '/music',
+        icon: <Music4 className="w-full h-full" />,
+        nav: [
+          {
+            title: 'Discover',
+            path: '/music/discover',
+            icon: <Radio className="w-full h-full" />,
+          },
+          {
+            title: 'Artists',
+            path: '/music/artists',
+            icon: <Mic2 className="w-full h-full" />,
+          },
+          {
+            title: 'Library',
+            path: '/music/library',
+            icon: <Library className="w-full h-full" />,
+          },
+        ],
+      },
+      {
+        title: 'Categories',
+        path: '/categories',
+        icon: <Tag className="w-full h-full" />,
+      },
+    ],
+  },
+  {
+    label: 'Analytics',
+    nav: [
+      {
+        title: 'Overview',
+        path: '/analytics/overview',
+        icon: <BarChart className="w-full h-full" />,
+      },
+      {
+        title: 'Reports',
+        // path: '/analytics/reports',
+        icon: <FileBarChart className="w-full h-full" />,
+      },
+      {
+        title: 'Real-time',
+        // path: '/analytics/realtime',
+        icon: <Activity className="w-full h-full" />,
+      },
+    ],
+  },
+  {
+    label: 'Settings',
+    nav: [
+      {
+        title: 'General',
+        path: '/settings/general',
+        icon: <Settings className="w-full h-full" />,
+      },
+      {
+        title: 'Profile',
+        path: '/settings/profile',
+        icon: <User className="w-full h-full" />,
+      },
+      {
+        title: 'Security',
+        path: '/settings/security',
+        icon: <Lock className="w-full h-full" />,
+      },
+    ],
+  },
+  {
+    label: 'Support',
+    nav: [
+      {
+        title: 'Help Center',
+        // path: '/support/help',
+        icon: <HelpCircle className="w-full h-full" />,
+      },
+      {
+        title: 'Feedback',
+        // path: '/support/feedback',
+        icon: <MessageSquare className="w-full h-full" />,
+      },
+    ],
+  },
+  {
+    label: 'Admin',
+    nav: [
+      {
+        title: 'System Logs',
+        // path: '/admin/logs',
+        icon: <ScrollText className="w-full h-full" />,
+      },
+      {
+        title: 'Feature Flags',
+        // path: '/admin/features',
+        icon: <ToggleLeft className="w-full h-full" />,
+      },
+    ],
+  },
+
+  {
+    label: 'Operations',
     nav: [
       {
         title: 'Yard Operations',
-        icon: <MDITruck className="size-5" />,
+        icon: <Layers className="w-full h-full" />,
         nav: [
           {
             title: 'Dashboard Yard',
             path: '/yard',
           },
           {
-            title: 'Yards Management',
-            path: '/yards-management',
+            title: 'SRN',
+            path: '/srn',
+            // icon: <Inspection className='w-full h-full' />,
           },
-        ],
-      },
-      {
-        title: 'QC Inspection',
-        path: '/qc-inspection',
-        icon: <Inspection className="size-5" />,
-      },
-      {
-        title: 'RGP',
-        path: '/rgp',
-        icon: <Inspection className="size-5" />,
-      },
-      {
-        title: 'PRN',
-        path: '/prn',
-        icon: <Inspection className="size-5" />,
-      },
-      {
-        title: 'SRN',
-        path: '/srn',
-        icon: <Inspection className="size-5" />,
-      },
-      {
-        title: 'POP',
-        path: '/pop',
-        icon: <Inspection className="size-5" />,
-      },
-      {
-        title: 'EPOD',
-        icon: <Menu className="size-4" />,
-        nav: [
           {
             title: 'EPOD Vehicles',
             path: '/epod',
-            // icon: <Home className="size-5" />,
+            // icon: <Home className='w-full h-full' />,
           },
         ],
       },
       {
-        title: 'Defective Vehicles',
-        path: '/defective-vehicles',
-        icon: <BusFront className="size-4" />,
-      },
-      {
-        title: 'Mark No Movement',
-        path: '/mark-no-movemenet',
-        icon: <CarMark className="size-5" />,
-      },
-      {
-        title: 'Secondary Movement',
-        path: '/secondary-movemenet',
-        icon: <CarMark className="size-5" />,
-      },
-      {
-        title: 'Dead Vehicles',
-        path: '/dead-vehicles',
-        icon: <DeadVeh className="size-4" />,
-      },
-    ],
-  },
-  {
-    lablel: 'Vehicle Management',
-    nav: [
-      {
-        title: 'Vehicle Assignment',
-        path: '/vehicle-assignment',
-        icon: <MDITruck className="size-5" />,
-      },
-      {
-        title: 'Advance Vehicle Search',
-        path: '/advance-vehicle-search',
-        icon: <Search className="size-5" />,
-      },
-      {
-        title: 'Vehicle Search',
-        path: '/vehicle-search',
-        icon: <Search className="size-5" />,
-      },
-      {
-        title: 'Accident Management',
-        path: '/accident-management',
-        icon: <CarMark className="size-5" />,
-      },
-    ],
-  },
-  {
-    lablel: 'Billing & Finance',
-    nav: [
-      {
-        title: 'Freight Billing',
-        icon: <Billing className="size-5" />,
-        nav: [
-          {
-            title: 'Dashboard - Billing',
-            path: '/dashboard-billing',
-            // icon: <Home className="size-5" />,
-          },
-          {
-            title: 'Billing Details',
-            path: '/billing-detail',
-            // icon: <Home className="size-5" />,
-          },
-        ],
-      },
-      {
-        title: 'Invoiced Vehicles',
-        path: '/invoiced-vehicles',
-        icon: <Billing className="size-5" />,
-      },
-    ],
-  },
-  {
-    lablel: 'Transport & Dealers',
-    nav: [
-      {
-        title: 'Admin Control',
-        icon: <Home className="size-5" />,
-        nav: [
-          {
-            title: 'Hold Vehicle Updates',
-            path: '/hold-vehicle-updates',
-            icon: <Home className="size-5" />,
-          },
-          {
-            title: 'Gate Exit Control',
-            path: '/gate-exit-control',
-            icon: <Home className="size-5" />,
-          },
-          {
-            title: 'Manual Intransit',
-            path: '/manual-intransit',
-            icon: <Home className="size-5" />,
-          },
-          {
-            title: 'Mark Manual Intransit',
-            path: '/mark-manual-intransit',
-            icon: <Home className="size-5" />,
-          },
-        ],
-      },
-      {
-        title: 'Master',
-        nav: [
-          {
-            title: 'Dealers',
-            path: '/dealers',
-            icon: <Home className="size-5" />,
-          },
-          {
-            title: 'Transporter',
-            path: '/transporters',
-            icon: <Home className="size-5" />,
-          },
-          {
-            title: 'Driver Master',
-            path: '/driver-master',
-            icon: <Home className="size-5" />,
-          },
-        ],
-      },
-      {
-        title: 'Priority Vehicles',
-        path: '/priority-vehicles',
-        icon: <Home className="size-5" />,
-      },
-    ],
-  },
-  {
-    lablel: 'Tracking & Monitoring',
-    nav: [
-      {
-        title: 'Live Tracking',
-        path: '/live-tracking',
-        icon: <BusFront className="size-5" />,
-      },
-      {
-        title: 'Gate Entry - HERE-MAP',
-        path: '/gate-entry',
-        icon: <BusFront className="size-5" />,
-        hideFilter: true,
-        hideExport: true
-      },
-      {
-        title: 'Reports',
-        icon: <LineChart className="size-5" />,
-        nav: [
-          {
-            title: 'Secondary Movement Vehicles',
-            path: '/secondary-movement-vehicles',
-            icon: <Home className="size-5" />,
-          },
-          {
-            title: 'Daily Performance',
-            path: '/daily-performance',
-            icon: <Home className="size-5" />,
-          },
-          {
-            title: 'Ageing Report',
-            path: '/ageing-report',
-            icon: <Home className="size-5" />,
-          },
-          {
-            title: 'Dispatch Ageing Report',
-            path: '/dispatch-ageing-report',
-            icon: <Home className="size-5" />,
-          },
-          {
-            title: 'Yard Delay Report',
-            path: '/yard-delay-report',
-            icon: <Home className="size-5" />,
-          },
-          {
-            title: 'Billing Allocation',
-            path: '/billing-allocation',
-            icon: <Home className="size-5" />,
-          },
-          {
-            title: 'Accident & Breakdown',
-            path: '/accident-breakdown',
-            icon: <Home className="size-5" />,
-          },
-        ],
-      },
-      {
-        title: 'FKRT Blank Vehicles',
-        path: '/fkrt-blank-vehicles',
-        icon: <BusFront className="size-5" />,
-      },
-    ],
-  },
-  {
-    lablel: 'Admin',
-    nav: [
-      {
-        title: 'User Management',
-        path: '/user-management',
-        icon: <User className="size-5" />,
-      },
-      {
-        title: 'Login Logs',
-        path: '/login-logs',
-        icon: <Clock className="size-5" />,
-      },
-      {
-        title: 'OBL Help Desk',
-        path: '/obl-helpdesk',
-        icon: <CircleQuestionMark className="size-5" />,
-        hideFilter: true
-      },
-      {
-        title: 'Change Password',
-        path: '/change-password',
-        icon: <Lock className="size-5" />,
-        hideFilter: true,
-        hideExport: true
+        title: 'Advance search',
+        path: '/advance-search',
+        icon: <Search className="w-full h-full" />,
       },
     ],
   },

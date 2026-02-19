@@ -1,5 +1,5 @@
 {
-  "name": "vts-ui",
+  "name": "demo-ui",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,14 +13,14 @@
     "@heroicons/react": "^2.2.0",
     "@reduxjs/toolkit": "^2.11.0",
     "@tailwindcss/vite": "^4.1.17",
-    "chart.js": "^4.5.1",
+    "axios": "^1.13.4",
     "lucide-react": "^0.555.0",
     "react": "^19.2.0",
-    "react-chartjs-2": "^5.3.1",
     "react-dom": "^19.2.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.9.6",
     "sweetalert2": "^11.26.3",
+    "swiper": "^12.0.3",
     "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
